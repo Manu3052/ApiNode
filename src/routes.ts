@@ -6,7 +6,6 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
         return {ok: true}
     })
     fastify.post("/costumer", async(request: FastifyRequest, reply: FastifyReply) => {
-        console.log(request, reply)
         return new CreateCustomerController().handle(request, reply)
     })
 
