@@ -15,9 +15,7 @@ export class CreateCustomerController{
         const customerUseCase = new CreateCustomerUseCase(costumeRepository)
         const customer = customerUseCase.execute(createCustomerDto)
         
-
-        console.log(reply, customer)
-        return reply.send(customer)
+        reply.send(customer)
     }
 }
 
